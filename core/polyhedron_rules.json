@@ -1,0 +1,95 @@
+{
+  "$schema_comment": "Declarative rule list for picking a polyhedron type per holon. Replaces hardcoded if-elif in pickPolyhedronForHolon. Rules are evaluated in order; first match wins. Each rule has 'when' (conditions) and 'pick' (polyhedron name).",
+  "rules": [
+    {
+      "name": "hot_frontier_strong",
+      "when": {"prestress_min": 3, "ve_min": 0.4},
+      "pick": "jitterbug_50",
+      "rationale": "high prestress + high VE = research tension hotspot; render as transitional jitterbug"
+    },
+    {
+      "name": "hot_frontier_weak",
+      "when": {"prestress_min": 2, "ve_min": 0.3},
+      "pick": "jitterbug_25",
+      "rationale": "moderate prestress + moderate VE = early-stage tension"
+    },
+    {
+      "name": "atomic_scale",
+      "when": {"scale_eq": 0},
+      "pick": "tetrahedron",
+      "rationale": "s0 atomic claims always render as the analysis-pole tetrahedron"
+    },
+    {
+      "name": "section_godnode",
+      "when": {"scale_eq": 1, "ve_min": 0.6},
+      "pick": "cuboctahedron",
+      "rationale": "high-VE section holon = vector equilibrium"
+    },
+    {
+      "name": "section_mid",
+      "when": {"scale_eq": 1, "ve_min": 0.3},
+      "pick": "octahedron",
+      "rationale": "mid-VE section = methodological"
+    },
+    {
+      "name": "section_saturated",
+      "when": {"scale_eq": 1, "saturation_min": 0.5},
+      "pick": "truncated_octahedron",
+      "rationale": "saturated section = space-filling synthesis"
+    },
+    {
+      "name": "section_default",
+      "when": {"scale_eq": 1},
+      "pick": "octahedron",
+      "rationale": "fallback for s1 — methodological"
+    },
+    {
+      "name": "paper_godnode",
+      "when": {"scale_eq": 2, "ve_min": 0.5},
+      "pick": "cuboctahedron",
+      "rationale": "paper at vector equilibrium"
+    },
+    {
+      "name": "paper_symmetric",
+      "when": {"scale_eq": 2, "ve_min": 0.3},
+      "pick": "icosahedron",
+      "rationale": "paper with high symmetric structure"
+    },
+    {
+      "name": "paper_saturated",
+      "when": {"scale_eq": 2, "saturation_min": 1.0},
+      "pick": "truncated_octahedron",
+      "rationale": "saturated paper"
+    },
+    {
+      "name": "paper_default",
+      "when": {"scale_eq": 2},
+      "pick": "cube",
+      "rationale": "fallback for s2 — pragmatic"
+    },
+    {
+      "name": "cluster_active",
+      "when": {"scale_eq": 3, "ve_min": 0.2},
+      "pick": "dodecahedron",
+      "rationale": "cluster with non-trivial activity"
+    },
+    {
+      "name": "cluster_default",
+      "when": {"scale_eq": 3},
+      "pick": "icosahedron",
+      "rationale": "fallback for s3 — symmetric synthesis"
+    },
+    {
+      "name": "project_root",
+      "when": {"scale_eq": 4},
+      "pick": "icosidodecahedron",
+      "rationale": "s4 project-as-whole"
+    },
+    {
+      "name": "ultimate_fallback",
+      "when": {},
+      "pick": "octahedron",
+      "rationale": "no rule matched — default to methodological"
+    }
+  ]
+}

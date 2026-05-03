@@ -1,0 +1,342 @@
+@prefix :        <https://tensegrity.research/ontology/gct#> .
+@prefix gct:     <https://tensegrity.research/ontology/gct#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix bfo:     <http://purl.obolibrary.org/obo/> .
+
+#################################################################
+# Ontology header
+#################################################################
+
+<https://tensegrity.research/ontology/gct> a owl:Ontology ;
+    dct:title "Tensegrity Knowledge Graph (GCT) Schema — OWL serialization v1.0" ;
+    dct:creator "Juan David Zuluaga-Monroy" ;
+    dct:description """First-pass OWL 2 DL serialization of the GCT 12-slot schema with
+explicit alignment to BFO 2.0 relations where a defensible correspondence exists, and
+new gct:-namespaced ObjectProperties for slots without a BFO analog. Companion artifact
+to the paper 'The Tensegrity Knowledge Graph' §7.2.""" ;
+    dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+    owl:versionInfo "1.0.0 (2026-05-02)" ;
+    rdfs:seeAlso <https://github.com/BFO-ontology/BFO-2020> ;
+    rdfs:comment "BFO 2.0 IRIs follow the OBO Foundry pattern http://purl.obolibrary.org/obo/BFO_<NNNNNNN> ; see https://github.com/BFO-ontology/BFO-2020 for the canonical specification." .
+
+#################################################################
+# BFO 2.0 anchor terms (declared as external classes/properties so
+# that imports are not required for parsing; full alignment is via
+# owl:equivalentProperty / rdfs:subPropertyOf assertions below).
+#################################################################
+
+bfo:BFO_0000001 a owl:Class ;
+    rdfs:label "entity" ;
+    rdfs:isDefinedBy <http://purl.obolibrary.org/obo/bfo.owl> .
+
+bfo:BFO_0000015 a owl:Class ;
+    rdfs:label "process" ;
+    rdfs:subClassOf bfo:BFO_0000001 .
+
+bfo:BFO_0000017 a owl:Class ;
+    rdfs:label "realizable entity" ;
+    rdfs:subClassOf bfo:BFO_0000001 .
+
+bfo:BFO_0000040 a owl:Class ;
+    rdfs:label "material entity" ;
+    rdfs:subClassOf bfo:BFO_0000001 .
+
+# BFO object properties referenced as alignment targets
+bfo:BFO_0000054 a owl:ObjectProperty ;
+    rdfs:label "realized in" .
+
+bfo:BFO_0000059 a owl:ObjectProperty ;
+    rdfs:label "concretizes" .
+
+bfo:BFO_0000050 a owl:ObjectProperty ;
+    rdfs:label "part of" ;
+    a owl:TransitiveProperty .
+
+bfo:BFO_0000051 a owl:ObjectProperty ;
+    rdfs:label "has part" ;
+    owl:inverseOf bfo:BFO_0000050 ;
+    a owl:TransitiveProperty .
+
+bfo:BFO_0000062 a owl:ObjectProperty ;
+    rdfs:label "preceded by" ;
+    a owl:TransitiveProperty .
+
+bfo:BFO_0000063 a owl:ObjectProperty ;
+    rdfs:label "precedes" ;
+    owl:inverseOf bfo:BFO_0000062 ;
+    a owl:TransitiveProperty .
+
+bfo:RO_0002411 a owl:ObjectProperty ;
+    rdfs:label "causally upstream of" ;
+    a owl:TransitiveProperty .
+
+bfo:RO_0002418 a owl:ObjectProperty ;
+    rdfs:label "causally downstream of" ;
+    owl:inverseOf bfo:RO_0002411 ;
+    a owl:TransitiveProperty .
+
+bfo:RO_0000052 a owl:ObjectProperty ;
+    rdfs:label "inheres in" .
+
+#################################################################
+# Top-level GCT classes
+#################################################################
+
+gct:Holon a owl:Class ;
+    rdfs:label "Holon" ;
+    rdfs:subClassOf bfo:BFO_0000001 ;
+    rdfs:comment "A node in the GCT graph: a Koestlerian holon, simultaneously a whole and a part. Specialised by holonic scale into HolonScale0..4." .
+
+gct:HolonScale0 a owl:Class ;
+    rdfs:label "Holon (scale 0 — byte level)" ;
+    rdfs:subClassOf gct:Holon ;
+    rdfs:comment "Lowest representational granularity. In the canonical Tensegrity corpus, byte-level latent vectors (s_0)." .
+
+gct:HolonScale1 a owl:Class ;
+    rdfs:label "Holon (scale 1 — word level)" ;
+    rdfs:subClassOf gct:Holon ;
+    rdfs:comment "Word-level granularity. Most experiment nodes (D-IDs) live here." .
+
+gct:HolonScale2 a owl:Class ;
+    rdfs:label "Holon (scale 2 — sentence/proposition level)" ;
+    rdfs:subClassOf gct:Holon ;
+    rdfs:comment "Proposition / paper-section / hypothesis granularity." .
+
+gct:HolonScale3 a owl:Class ;
+    rdfs:label "Holon (scale 3 — document/paper level)" ;
+    rdfs:subClassOf gct:Holon ;
+    rdfs:comment "Whole-paper granularity." .
+
+gct:HolonScale4 a owl:Class ;
+    rdfs:label "Holon (scale 4 — corpus/program level)" ;
+    rdfs:subClassOf gct:Holon ;
+    rdfs:comment "The research programme as a whole; also the home of meta-objects such as schema and maxim definitions." .
+
+# Disjointness between sibling scales (DL-friendly)
+[] a owl:AllDisjointClasses ;
+    owl:members ( gct:HolonScale0 gct:HolonScale1 gct:HolonScale2 gct:HolonScale3 gct:HolonScale4 ) .
+
+# Domain-specific subclasses used in the worked example
+gct:Experiment a owl:Class ;
+    rdfs:label "Experiment" ;
+    rdfs:subClassOf gct:Holon ;
+    rdfs:comment "An empirical investigation node (canonical D-XXX in the Tensegrity corpus). Populates BFO 'planned process' under integration." .
+
+gct:Hypothesis a owl:Class ;
+    rdfs:label "Hypothesis" ;
+    rdfs:subClassOf gct:Holon .
+
+gct:Specification a owl:Class ;
+    rdfs:label "Specification (formal-cause document)" ;
+    rdfs:subClassOf gct:Holon ;
+    rdfs:comment "A protocol, pre-registration, or design document that fixes the form of a downstream artifact. Aristotelian formal cause." .
+
+gct:PaperSection a owl:Class ;
+    rdfs:label "Paper section" ;
+    rdfs:subClassOf gct:Holon .
+
+#################################################################
+# Data properties
+#################################################################
+
+gct:hasScale a owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "has holonic scale" ;
+    rdfs:domain gct:Holon ;
+    rdfs:range [ a rdfs:Datatype ;
+                 owl:onDatatype xsd:integer ;
+                 owl:withRestrictions ( [ xsd:minInclusive 0 ] [ xsd:maxInclusive 4 ] ) ] ;
+    rdfs:comment "Integer 0..4 selecting one of HolonScale0..HolonScale4. Functional: each holon has exactly one scale." .
+
+gct:aristotelianCompleteness a owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "Aristotelian completeness score" ;
+    rdfs:domain gct:Holon ;
+    rdfs:range [ a rdfs:Datatype ;
+                 owl:onDatatype xsd:decimal ;
+                 owl:withRestrictions ( [ xsd:minInclusive "0.0"^^xsd:decimal ]
+                                        [ xsd:maxInclusive "1.0"^^xsd:decimal ] ) ] ;
+    rdfs:comment "AC(n) ∈ {0.00, 0.25, 0.50, 0.75, 1.00} per Definition 5 of the GCT paper. Counts how many of the four Aristotelian causes (FORMAL/MATERIAL/EFFICIENT/FINAL) are documented for this node, divided by 4." .
+
+gct:veScore a owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "Evidential value (VE) harmonic score" ;
+    rdfs:domain gct:Holon ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "Harmonic mean of weighted in/out degree per Definition 4. Nodes with VE_harmonic ≥ 0.5 are 'god nodes'." .
+
+gct:timestamp a owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "node timestamp λ" ;
+    rdfs:domain gct:Holon ;
+    rdfs:range xsd:dateTime .
+
+#################################################################
+# THE 12 GCT SLOTS — one ObjectProperty per slot, with explicit
+# BFO mapping (rdfs:subPropertyOf) where defensible, otherwise
+# a comment recording the deliberate decision NOT to map.
+#################################################################
+
+# --- 1. CAUSE — efficient cause (Aristotle); maps cleanly to BFO 'causally upstream of' ---
+gct:cause a owl:ObjectProperty ;
+    rdfs:label "CAUSE (efficient cause)" ;
+    rdfs:domain gct:Holon ;
+    rdfs:range gct:Holon ;
+    rdfs:subPropertyOf bfo:RO_0002411 ;
+    owl:inverseOf gct:effect ;
+    a owl:TransitiveProperty ;
+    rdfs:comment """CAUSE u v means u is an efficient-cause antecedent of v. Direct alignment with BFO RO 'causally upstream of'.
+Scale-compatibility (Def. 3): |s(u) − s(v)| ≤ 1.""" .
+
+# --- 2. EFFECT — observational dual of CAUSE; BFO 'causally downstream of' ---
+gct:effect a owl:ObjectProperty ;
+    rdfs:label "EFFECT (causally downstream of)" ;
+    rdfs:domain gct:Holon ;
+    rdfs:range gct:Holon ;
+    rdfs:subPropertyOf bfo:RO_0002418 ;
+    a owl:TransitiveProperty ;
+    rdfs:comment "Inverse of CAUSE. Observational, not normative — see §5.2 of the paper for why no validation rule is attached at the maxim level." .
+
+# --- 3. PREDECESSOR — temporal precedence; BFO 'preceded by' ---
+gct:predecessor a owl:ObjectProperty ;
+    rdfs:label "PREDECESSOR (temporally preceded by)" ;
+    rdfs:domain gct:Holon ;
+    rdfs:range gct:Holon ;
+    rdfs:subPropertyOf bfo:BFO_0000062 ;
+    owl:inverseOf gct:successor ;
+    a owl:TransitiveProperty ;
+    rdfs:comment "Source comes after target in time. Aligned with BFO 'preceded by'. PREDECESSOR is the dominant temporal-lineage edge between successive D-IDs in the corpus." .
+
+# --- 4. SUCCESSOR — temporal precedence (forward); BFO 'precedes' ---
+gct:successor a owl:ObjectProperty ;
+    rdfs:label "SUCCESSOR (temporally precedes)" ;
+    rdfs:domain gct:Holon ;
+    rdfs:range gct:Holon ;
+    rdfs:subPropertyOf bfo:BFO_0000063 ;
+    a owl:TransitiveProperty ;
+    rdfs:comment "Inverse of PREDECESSOR. Aligned with BFO 'precedes'. Per §7.1, this slot is the second of two unoccupied-in-phase-9 slots that the schema names but no extractor populates yet." .
+
+# --- 5. CONTAINER — mereological containment; BFO 'has part' (specialised) ---
+gct:container a owl:ObjectProperty ;
+    rdfs:label "CONTAINER (has-part, scale-strict)" ;
+    rdfs:domain gct:Holon ;
+    rdfs:range gct:Holon ;
+    rdfs:subPropertyOf bfo:BFO_0000051 ;
+    rdfs:comment """CONTAINER u v means u is a higher-scale whole that contains the lower-scale part v.
+Strictly stronger than BFO 'has part': enforces s(u) > s(v) per Def. 3. Material aspect of containment is what makes this a 'final cause' contributor in the AC mapping.""" .
+
+# --- 6. INSTANTIATION — type-instance; BFO 'concretizes' (and rdf:type at the meta level) ---
+gct:instantiation a owl:ObjectProperty ;
+    rdfs:label "INSTANTIATION (concretizes)" ;
+    rdfs:domain gct:Holon ;
+    rdfs:range gct:Holon ;
+    rdfs:subPropertyOf bfo:BFO_0000059 ;
+    rdfs:comment """INSTANTIATION u v means u is a concrete instance of the type/universal v.
+The closest BFO match is 'concretizes' (RO BFO_0000059), which captures specifically dependent
+continuants concretizing their generically dependent counterparts. We do NOT use rdf:type because the GCT preserves the instantiation relation as a first-class graph edge (queryable, scale-indexed),
+whereas rdf:type is a meta-level construct that escapes the GCT's edge schema.""" .
+
+# --- 7. SUBSTRATE — material dependence; BFO 'inheres in' ---
+gct:substrate a owl:ObjectProperty ;
+    rdfs:label "SUBSTRATE (material cause / inheres in)" ;
+    rdfs:domain gct:Holon ;
+    rdfs:range gct:Holon ;
+    rdfs:subPropertyOf bfo:RO_0000052 ;
+    rdfs:comment "SUBSTRATE u v means u materially depends on v (the substrate). Aligned with BFO 'inheres in'. Aristotelian material cause." .
+
+# --- 8. SPECIFICATION — formal cause; NO clean BFO analog ---
+gct:formallySpecifiedBy a owl:ObjectProperty ;
+    rdfs:label "SPECIFICATION (formally specified by)" ;
+    rdfs:domain gct:Holon ;
+    rdfs:range gct:Specification ;
+    rdfs:comment """SPECIFICATION u v means the form of u is fixed by the specification document v
+(protocol, pre-registration, schema declaration). Aristotelian formal cause.
+DELIBERATELY NOT MAPPED to a BFO relation: BFO has no first-class 'formally specified by' that
+preserves both directionality and scale-compatibility. The closest BFO concept is 'has specification'
+in the IAO extension (information-content-entity-about), which is heavier than what GCT requires.
+This is one of the four GCT slots Future Work §7.2 explicitly flags as needing a fresh property.""" .
+
+# --- 9. CODE — implementation grounding; NO clean BFO analog ---
+gct:implementedBy a owl:ObjectProperty ;
+    rdfs:label "CODE (implemented by)" ;
+    rdfs:domain gct:Holon ;
+    rdfs:range gct:Holon ;
+    rdfs:comment """CODE u v means the abstract entity u is operationally implemented by code module v.
+DELIBERATELY NOT MAPPED to BFO. The relation is reflexive at the schema layer (the code that builds
+the graph appears IN the graph, see §4 self-reference). BFO does not model implementation grounding
+of formal artefacts in their executable substrates.""" .
+
+# --- 10. PEER_COHERENT — same-scale coherence; symmetric, no BFO analog ---
+gct:peerCoherentWith a owl:ObjectProperty , owl:SymmetricProperty ;
+    rdfs:label "PEER_COHERENT (peer-coherent with)" ;
+    rdfs:domain gct:Holon ;
+    rdfs:range gct:Holon ;
+    rdfs:comment """Symmetric same-scale coherence (Def. 3: s(u) = s(v)). Encodes that two artifacts at the same holonic level mutually support each other's claim structure (e.g., two experiments
+that both confirm an effect). DELIBERATELY NOT MAPPED to BFO — coherence is a relation between
+information-bearing artefacts, not between BFO continuants/occurrents.""" .
+
+# --- 11. PEER_CONTRADICTORY — same-scale contradiction; symmetric, no BFO analog ---
+gct:peerContradicts a owl:ObjectProperty , owl:SymmetricProperty ;
+    rdfs:label "PEER_CONTRADICTORY (peer-contradicts)" ;
+    rdfs:domain gct:Holon ;
+    rdfs:range gct:Holon ;
+    owl:propertyDisjointWith gct:peerCoherentWith ;
+    rdfs:comment """Symmetric same-scale contradiction. The first PEER_CONTRADICTORY edge in the
+canonical corpus appears in phase-14 (§7.1). DELIBERATELY NOT MAPPED to BFO for the same reason
+as PEER_COHERENT, and additionally because contradiction is an epistemic state of the research
+record, not a relation between domain entities.""" .
+
+# --- 12. THERMO — thermodynamic coupling; domain-specific, no BFO analog ---
+gct:thermodynamicallyCoupledTo a owl:ObjectProperty , owl:SymmetricProperty ;
+    rdfs:label "THERMO (thermodynamically coupled to)" ;
+    rdfs:domain gct:Holon ;
+    rdfs:range gct:Holon ;
+    rdfs:comment """Symmetric thermodynamic coupling between a structural node and the
+THERMODYNAMIC-layer measurement that constrains it. DELIBERATELY NOT MAPPED to BFO — this is a
+domain-specific link between layers of the Tensegrity research programme; future replication
+in a non-physics domain may rename this slot.""" .
+
+#################################################################
+# WORKED EXAMPLE — minimal demonstration of schema use
+#################################################################
+
+# 1. An experiment node (D-101 is a real D-ID from the Tensegrity corpus)
+:experiment_d101 a gct:Experiment, gct:HolonScale1 ;
+    rdfs:label "D-101 — HNC equiangularity test" ;
+    gct:hasScale 1 ;
+    gct:aristotelianCompleteness "0.75"^^xsd:decimal ;
+    gct:veScore "0.83"^^xsd:decimal ;
+    gct:timestamp "2026-04-14T12:00:00Z"^^xsd:dateTime .
+
+# 2. The pre-registration / specification it conforms to
+:protocol_p_a2 a gct:Specification, gct:HolonScale2 ;
+    rdfs:label "OSF pre-registration P-A2 (causal permutation test)" ;
+    gct:hasScale 2 .
+
+# 3. SPECIFICATION edge (formal cause)
+:experiment_d101 gct:formallySpecifiedBy :protocol_p_a2 .
+
+# 4. A second experiment that PREDECESSOR-links to D-101
+:experiment_d099 a gct:Experiment, gct:HolonScale1 ;
+    rdfs:label "D-099 — K=4 ETF baseline" ;
+    gct:hasScale 1 ;
+    gct:timestamp "2026-04-12T09:00:00Z"^^xsd:dateTime .
+
+# D-101 is preceded by D-099 (D-099 ran first, D-101 follows it)
+:experiment_d101 gct:predecessor :experiment_d099 .
+
+# 5. A paper section that CAUSEs the experiment (research motivation)
+:paper_section_p1_intro a gct:PaperSection, gct:HolonScale2 ;
+    rdfs:label "Paper P1 §1 Introduction (motivating the HNC equiangularity claim)" ;
+    gct:hasScale 2 .
+
+# Research motivation: §1 of P1 caused the design and execution of D-101
+:paper_section_p1_intro gct:cause :experiment_d101 .
+
+# Demonstrate a peer-coherence edge (D-099 and D-101 are at the same scale and mutually support)
+:experiment_d099 gct:peerCoherentWith :experiment_d101 .
+
+# Demonstrate a CONTAINER edge (paper section contains experiment reference)
+:paper_section_p1_intro gct:container :experiment_d101 .
+
+# End of file

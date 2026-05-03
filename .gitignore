@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+venv/
+.venv/
+env/
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# LaTeX auxiliary
+*.aux
+*.log
+*.out
+*.toc
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.bbl
+*.blg
+*.dvi
+# Keep the final compiled PDF when generated
+!gct_paper_main.pdf
+!PAPER_DRAFT_preview.pdf
+
+# Snapshot rebuilds (only the canonical snapshots in repo root are tracked)
+tensegrity_graph_*_partial.json
+tensegrity_graph_phase[0-8]_*.json
+tensegrity_graph_phase1[0-3]_*.json
+# (phase9, phase14, biomedical are tracked — the rest are dev iterations)
+
+# Compile artefacts in publication/
+publication/*.aux
+publication/*.log
+publication/*.out
+publication/*.toc
+publication/compile_log.txt
+publication/gct_paper_fallback.*
+publication/verified_numbers.md
+publication/biomedical_verified.md

@@ -1,0 +1,3000 @@
+{
+  "schema_version": "1.0.0",
+  "stats": {
+    "n_nodes": 25,
+    "n_edges": 38,
+    "n_struts": 22,
+    "n_cables": 16,
+    "strut_cable_ratio": 1.375,
+    "avg_ve_score": 0.203,
+    "avg_ve_score_harmonic": 0.36,
+    "max_ve_score": 0.667,
+    "max_ve_score_harmonic": 1.0,
+    "avg_prestress": 0.12,
+    "total_prestress": 3,
+    "avg_saturation": 0.253,
+    "max_saturation": 0.667,
+    "scale_distribution": {
+      "0": 5,
+      "2": 9,
+      "1": 11
+    },
+    "layer_distribution": {
+      "structural": 24,
+      "thermodynamic": 1
+    },
+    "slot_usage": {
+      "CAUSE": 3,
+      "EFFECT": 3,
+      "SPECIFICATION": 2,
+      "SUBSTRATE": 8,
+      "PREDECESSOR": 1,
+      "CONTAINER": 7,
+      "PEER_COHERENT": 2,
+      "PEER_CONTRADICTORY": 1,
+      "INSTANTIATION": 2,
+      "SUCCESSOR": 1,
+      "CODE": 7,
+      "THERMO": 1
+    },
+    "topology_beta_0_components": 3,
+    "topology_beta_1_cycles": 8,
+    "topology_cycle_basis_size": 8
+  },
+  "nodes": [
+    {
+      "id": "CL-HEK293",
+      "label": "HEK293 (human embryonic kidney)",
+      "scale": 0,
+      "layer": "structural",
+      "structural_ref": null,
+      "harmonic_ceiling": 4,
+      "ve_score": 0.083,
+      "ve_score_harmonic": 0.25,
+      "saturation": 0.25,
+      "prestress_local": 0,
+      "asymmetry": 0.083,
+      "aristotelian_completeness": {
+        "completeness": 0.25,
+        "by_cause": {
+          "material": 0,
+          "formal": 0,
+          "efficient": 0,
+          "final": 1
+        },
+        "missing_causes": [
+          "material",
+          "formal",
+          "efficient"
+        ]
+      },
+      "slots": {
+        "1_successor": [],
+        "2_predecessor": [],
+        "3_substrate": [],
+        "4_container": [
+          "e8",
+          "e12",
+          "e15"
+        ],
+        "5_peer_coherent": [],
+        "6_peer_contradictory": [],
+        "7_code": [],
+        "8_thermo": [],
+        "9_cause": [],
+        "10_effect": [],
+        "11_specification": [],
+        "12_instantiation": []
+      },
+      "slot_classical_names": {
+        "4_container": "Genus (Porphyry's Isagoge)"
+      },
+      "active_since": "2026-05-02T00:00:00",
+      "deprecated_since": null,
+      "metadata": {
+        "node_type": "cell_line",
+        "domain": "biomedical",
+        "tissue_origin": "kidney",
+        "species": "Homo sapiens",
+        "prestress_local": 0
+      },
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "CL-HeLa",
+      "label": "HeLa (cervical adenocarcinoma)",
+      "scale": 0,
+      "layer": "structural",
+      "structural_ref": null,
+      "harmonic_ceiling": 4,
+      "ve_score": 0.083,
+      "ve_score_harmonic": 0.25,
+      "saturation": 0.25,
+      "prestress_local": 0,
+      "asymmetry": 0.083,
+      "aristotelian_completeness": {
+        "completeness": 0.25,
+        "by_cause": {
+          "material": 0,
+          "formal": 0,
+          "efficient": 0,
+          "final": 1
+        },
+        "missing_causes": [
+          "material",
+          "formal",
+          "efficient"
+        ]
+      },
+      "slots": {
+        "1_successor": [],
+        "2_predecessor": [],
+        "3_substrate": [],
+        "4_container": [
+          "e9",
+          "e11",
+          "e14"
+        ],
+        "5_peer_coherent": [],
+        "6_peer_contradictory": [],
+        "7_code": [],
+        "8_thermo": [],
+        "9_cause": [],
+        "10_effect": [],
+        "11_specification": [],
+        "12_instantiation": []
+      },
+      "slot_classical_names": {
+        "4_container": "Genus (Porphyry's Isagoge)"
+      },
+      "active_since": "2026-05-02T00:00:00",
+      "deprecated_since": null,
+      "metadata": {
+        "node_type": "cell_line",
+        "domain": "biomedical",
+        "tissue_origin": "cervix",
+        "species": "Homo sapiens",
+        "prestress_local": 0
+      },
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "CL-A549",
+      "label": "A549 (lung adenocarcinoma)",
+      "scale": 0,
+      "layer": "structural",
+      "structural_ref": null,
+      "harmonic_ceiling": 4,
+      "ve_score": 0.083,
+      "ve_score_harmonic": 0.25,
+      "saturation": 0.167,
+      "prestress_local": 0,
+      "asymmetry": 0.083,
+      "aristotelian_completeness": {
+        "completeness": 0.25,
+        "by_cause": {
+          "material": 0,
+          "formal": 0,
+          "efficient": 0,
+          "final": 1
+        },
+        "missing_causes": [
+          "material",
+          "formal",
+          "efficient"
+        ]
+      },
+      "slots": {
+        "1_successor": [],
+        "2_predecessor": [],
+        "3_substrate": [],
+        "4_container": [
+          "e10",
+          "e13"
+        ],
+        "5_peer_coherent": [],
+        "6_peer_contradictory": [],
+        "7_code": [],
+        "8_thermo": [],
+        "9_cause": [],
+        "10_effect": [],
+        "11_specification": [],
+        "12_instantiation": []
+      },
+      "slot_classical_names": {
+        "4_container": "Genus (Porphyry's Isagoge)"
+      },
+      "active_since": "2026-05-02T00:00:00",
+      "deprecated_since": null,
+      "metadata": {
+        "node_type": "cell_line",
+        "domain": "biomedical",
+        "tissue_origin": "lung",
+        "species": "Homo sapiens",
+        "prestress_local": 0
+      },
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "PATHWAY-glycolysis",
+      "label": "Glycolysis (EMP pathway)",
+      "scale": 2,
+      "layer": "structural",
+      "structural_ref": null,
+      "harmonic_ceiling": 12,
+      "ve_score": 0.25,
+      "ve_score_harmonic": 0.25,
+      "saturation": 0.417,
+      "prestress_local": 1,
+      "asymmetry": 0.25,
+      "aristotelian_completeness": {
+        "completeness": 0.5,
+        "by_cause": {
+          "material": 2,
+          "formal": 0,
+          "efficient": 0,
+          "final": 1
+        },
+        "missing_causes": [
+          "formal",
+          "efficient"
+        ]
+      },
+      "slots": {
+        "1_successor": [],
+        "2_predecessor": [],
+        "3_substrate": [
+          "e17",
+          "e18"
+        ],
+        "4_container": [],
+        "5_peer_coherent": [],
+        "6_peer_contradictory": [],
+        "7_code": [],
+        "8_thermo": [
+          "e37"
+        ],
+        "9_cause": [],
+        "10_effect": [
+          "e3",
+          "e5"
+        ],
+        "11_specification": [],
+        "12_instantiation": []
+      },
+      "slot_classical_names": {
+        "3_substrate": "Material cause / Constituent",
+        "8_thermo": "Accident (Porphyry, contingent attribute)",
+        "10_effect": "From effect (ab effectu)"
+      },
+      "active_since": "2026-05-02T00:00:00",
+      "deprecated_since": null,
+      "metadata": {
+        "node_type": "concept",
+        "domain": "biomedical",
+        "concept_kind": "metabolic_pathway",
+        "description": "Glucose → 2 pyruvate; HK2-rate-limited in tumour cells (Warburg).",
+        "prestress_local": 1
+      },
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "PATHWAY-tca",
+      "label": "TCA cycle / Krebs cycle",
+      "scale": 2,
+      "layer": "structural",
+      "structural_ref": null,
+      "harmonic_ceiling": 12,
+      "ve_score": 0.167,
+      "ve_score_harmonic": 0.167,
+      "saturation": 0.167,
+      "prestress_local": 0,
+      "asymmetry": 0.167,
+      "aristotelian_completeness": {
+        "completeness": 0.5,
+        "by_cause": {
+          "material": 1,
+          "formal": 0,
+          "efficient": 0,
+          "final": 1
+        },
+        "missing_causes": [
+          "formal",
+          "efficient"
+        ]
+      },
+      "slots": {
+        "1_successor": [],
+        "2_predecessor": [],
+        "3_substrate": [
+          "e19"
+        ],
+        "4_container": [],
+        "5_peer_coherent": [],
+        "6_peer_contradictory": [],
+        "7_code": [],
+        "8_thermo": [],
+        "9_cause": [],
+        "10_effect": [
+          "e4"
+        ],
+        "11_specification": [],
+        "12_instantiation": []
+      },
+      "slot_classical_names": {
+        "3_substrate": "Material cause / Constituent",
+        "10_effect": "From effect (ab effectu)"
+      },
+      "active_since": "2026-05-02T00:00:00",
+      "deprecated_since": null,
+      "metadata": {
+        "node_type": "concept",
+        "domain": "biomedical",
+        "concept_kind": "metabolic_pathway",
+        "description": "Acetyl-CoA oxidation; SDH (Complex II) ties TCA to ETC.",
+        "prestress_local": 0
+      },
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "PATHWAY-pi3k-akt",
+      "label": "PI3K-AKT-mTOR signalling",
+      "scale": 2,
+      "layer": "structural",
+      "structural_ref": null,
+      "harmonic_ceiling": 12,
+      "ve_score": 0.167,
+      "ve_score_harmonic": 0.167,
+      "saturation": 0.167,
+      "prestress_local": 0,
+      "asymmetry": 0.0,
+      "aristotelian_completeness": {
+        "completeness": 0.5,
+        "by_cause": {
+          "material": 1,
+          "formal": 0,
+          "efficient": 1,
+          "final": 0
+        },
+        "missing_causes": [
+          "formal",
+          "final"
+        ]
+      },
+      "slots": {
+        "1_successor": [],
+        "2_predecessor": [],
+        "3_substrate": [
+          "e20"
+        ],
+        "4_container": [],
+        "5_peer_coherent": [],
+        "6_peer_contradictory": [],
+        "7_code": [],
+        "8_thermo": [],
+        "9_cause": [
+          "e2"
+        ],
+        "10_effect": [],
+        "11_specification": [],
+        "12_instantiation": []
+      },
+      "slot_classical_names": {
+        "3_substrate": "Material cause / Constituent",
+        "9_cause": "Efficient cause (causa efficiens)"
+      },
+      "active_since": "2026-05-02T00:00:00",
+      "deprecated_since": null,
+      "metadata": {
+        "node_type": "concept",
+        "domain": "biomedical",
+        "concept_kind": "signalling_pathway",
+        "description": "Growth-factor → PI3K → AKT → mTORC1; oncogenic when constitutively on.",
+        "prestress_local": 0
+      },
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "DISEASE-pancreatic-ca",
+      "label": "Pancreatic adenocarcinoma",
+      "scale": 2,
+      "layer": "structural",
+      "structural_ref": null,
+      "harmonic_ceiling": 12,
+      "ve_score": 0.167,
+      "ve_score_harmonic": 0.167,
+      "saturation": 0.167,
+      "prestress_local": 0,
+      "asymmetry": 0.167,
+      "aristotelian_completeness": {
+        "completeness": 0.5,
+        "by_cause": {
+          "material": 0,
+          "formal": 1,
+          "efficient": 1,
+          "final": 0
+        },
+        "missing_causes": [
+          "material",
+          "final"
+        ]
+      },
+      "slots": {
+        "1_successor": [],
+        "2_predecessor": [],
+        "3_substrate": [],
+        "4_container": [],
+        "5_peer_coherent": [],
+        "6_peer_contradictory": [],
+        "7_code": [],
+        "8_thermo": [],
+        "9_cause": [
+          "e1"
+        ],
+        "10_effect": [],
+        "11_specification": [
+          "e28"
+        ],
+        "12_instantiation": []
+      },
+      "slot_classical_names": {
+        "9_cause": "Efficient cause (causa efficiens)",
+        "11_specification": "Formal cause / Eidos (Aristotle)"
+      },
+      "active_since": "2026-05-02T00:00:00",
+      "deprecated_since": null,
+      "metadata": {
+        "node_type": "concept",
+        "domain": "biomedical",
+        "concept_kind": "disease",
+        "description": "~95% bear KRAS-G12D/V; exemplar of oncogene-addicted cancer.",
+        "prestress_local": 0
+      },
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "DISEASE-apoptosis-evasion",
+      "label": "Apoptosis evasion (cancer hallmark)",
+      "scale": 2,
+      "layer": "structural",
+      "structural_ref": null,
+      "harmonic_ceiling": 12,
+      "ve_score": 0.167,
+      "ve_score_harmonic": 0.167,
+      "saturation": 0.167,
+      "prestress_local": 0,
+      "asymmetry": 0.167,
+      "aristotelian_completeness": {
+        "completeness": 0.5,
+        "by_cause": {
+          "material": 0,
+          "formal": 1,
+          "efficient": 1,
+          "final": 0
+        },
+        "missing_causes": [
+          "material",
+          "final"
+        ]
+      },
+      "slots": {
+        "1_successor": [],
+        "2_predecessor": [],
+        "3_substrate": [],
+        "4_container": [],
+        "5_peer_coherent": [],
+        "6_peer_contradictory": [],
+        "7_code": [],
+        "8_thermo": [],
+        "9_cause": [
+          "e0"
+        ],
+        "10_effect": [],
+        "11_specification": [
+          "e27"
+        ],
+        "12_instantiation": []
+      },
+      "slot_classical_names": {
+        "9_cause": "Efficient cause (causa efficiens)",
+        "11_specification": "Formal cause / Eidos (Aristotle)"
+      },
+      "active_since": "2026-05-02T00:00:00",
+      "deprecated_since": null,
+      "metadata": {
+        "node_type": "concept",
+        "domain": "biomedical",
+        "concept_kind": "disease",
+        "description": "Hanahan & Weinberg hallmark; TP53 loss is canonical driver.",
+        "prestress_local": 0
+      },
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "BIO-EXP-001",
+      "label": "siTP53 in HEK293 → reduced apoptosis after etoposide",
+      "scale": 1,
+      "layer": "structural",
+      "structural_ref": null,
+      "harmonic_ceiling": 6,
+      "ve_score": 0.667,
+      "ve_score_harmonic": 1.0,
+      "saturation": 0.667,
+      "prestress_local": 1,
+      "asymmetry": 0.333,
+      "aristotelian_completeness": {
+        "completeness": 0.75,
+        "by_cause": {
+          "material": 3,
+          "formal": 0,
+          "efficient": 2,
+          "final": 1
+        },
+        "missing_causes": [
+          "formal"
+        ]
+      },
+      "slots": {
+        "1_successor": [
+          "e16"
+        ],
+        "2_predecessor": [
+          "e29"
+        ],
+        "3_substrate": [
+          "e8"
+        ],
+        "4_container": [],
+        "5_peer_coherent": [
+          "e24"
+        ],
+        "6_peer_contradictory": [
+          "e26"
+        ],
+        "7_code": [],
+        "8_thermo": [
+          "e30"
+        ],
+        "9_cause": [],
+        "10_effect": [
+          "e0"
+        ],
+        "11_specification": [],
+        "12_instantiation": [
+          "e27"
+        ]
+      },
+      "slot_classical_names": {
+        "1_successor": "A posteriori (from time, posterior)",
+        "2_predecessor": "A priori (from time, prior)",
+        "3_substrate": "Material cause / Constituent",
+        "5_peer_coherent": "From similars (a similibus)",
+        "6_peer_contradictory": "From contraries (a contrariis)",
+        "8_thermo": "Accident (Porphyry, contingent attribute)",
+        "10_effect": "From effect (ab effectu)",
+        "12_instantiation": "Individual / Hypostasis (this-something)"
+      },
+      "active_since": "2025-11-01T00:00:00",
+      "deprecated_since": null,
+      "metadata": {
+        "node_type": "experiment",
+        "domain": "biomedical",
+        "gene_target": "TP53",
+        "cell_line": "CL-HEK293",
+        "phenotype": "apoptosis_attenuation_after_DNA_damage",
+        "state": "OK",
+        "prestress_local": 1
+      },
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "BIO-EXP-002",
+      "label": "siTP53 in HeLa → reduced apoptosis after etoposide (replication)",
+      "scale": 1,
+      "layer": "structural",
+      "structural_ref": null,
+      "harmonic_ceiling": 6,
+      "ve_score": 0.333,
+      "ve_score_harmonic": 0.667,
+      "saturation": 0.333,
+      "prestress_local": 0,
+      "asymmetry": 0.0,
+      "aristotelian_completeness": {
+        "completeness": 0.5,
+        "by_cause": {
+          "material": 2,
+          "formal": 0,
+          "efficient": 1,
+          "final": 0
+        },
+        "missing_causes": [
+          "formal",
+          "final"
+        ]
+      },
+      "slots": {
+        "1_successor": [],
+        "2_predecessor": [
+          "e16"
+        ],
+        "3_substrate": [
+          "e9"
+        ],
+        "4_container": [],
+        "5_peer_coherent": [
+          "e24"
+        ],
+        "6_peer_contradictory": [],
+        "7_code": [],
+        "8_thermo": [
+          "e31"
+        ],
+        "9_cause": [],
+        "10_effect": [],
+        "11_specification": [],
+        "12_instantiation": []
+      },
+      "slot_classical_names": {
+        "2_predecessor": "A priori (from time, prior)",
+        "3_substrate": "Material cause / Constituent",
+        "5_peer_coherent": "From similars (a similibus)",
+        "8_thermo": "Accident (Porphyry, contingent attribute)"
+      },
+      "active_since": "2025-11-01T00:00:00",
+      "deprecated_since": null,
+      "metadata": {
+        "node_type": "experiment",
+        "domain": "biomedical",
+        "gene_target": "TP53",
+        "cell_line": "CL-HeLa",
+        "phenotype": "apoptosis_attenuation_after_DNA_damage",
+        "state": "OK",
+        "prestress_local": 0
+      },
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "BIO-EXP-003",
+      "label": "siKRAS in A549 → loss of anchorage-independent growth",
+      "scale": 1,
+      "layer": "structural",
+      "structural_ref": null,
+      "harmonic_ceiling": 6,
+      "ve_score": 0.333,
+      "ve_score_harmonic": 0.667,
+      "saturation": 0.417,
+      "prestress_local": 0,
+      "asymmetry": 0.333,
+      "aristotelian_completeness": {
+        "completeness": 0.5,
+        "by_cause": {
+          "material": 3,
+          "formal": 0,
+          "efficient": 0,
+          "final": 1
+        },
+        "missing_causes": [
+          "formal",
+          "efficient"
+        ]
+      },
+      "slots": {
+        "1_successor": [],
+        "2_predecessor": [],
+        "3_substrate": [
+          "e10"
+        ],
+        "4_container": [],
+        "5_peer_coherent": [],
+        "6_peer_contradictory": [],
+        "7_code": [],
+        "8_thermo": [
+          "e32"
+        ],
+        "9_cause": [],
+        "10_effect": [
+          "e1"
+        ],
+        "11_specification": [],
+        "12_instantiation": [
+          "e6",
+          "e28"
+        ]
+      },
+      "slot_classical_names": {
+        "3_substrate": "Material cause / Constituent",
+        "8_thermo": "Accident (Porphyry, contingent attribute)",
+        "10_effect": "From effect (ab effectu)",
+        "12_instantiation": "Individual / Hypostasis (this-something)"
+      },
+      "active_since": "2025-11-01T00:00:00",
+      "deprecated_since": null,
+      "metadata": {
+        "node_type": "experiment",
+        "domain": "biomedical",
+        "gene_target": "KRAS",
+        "cell_line": "CL-A549",
+        "phenotype": "anchorage_independent_growth_loss",
+        "state": "OK",
+        "prestress_local": 0
+      },
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "BIO-EXP-004",
+      "label": "siHK2 in HeLa → ~60% drop in lactate efflux (Warburg attenuated)",
+      "scale": 1,
+      "layer": "structural",
+      "structural_ref": null,
+      "harmonic_ceiling": 6,
+      "ve_score": 0.417,
+      "ve_score_harmonic": 0.833,
+      "saturation": 0.417,
+      "prestress_local": 0,
+      "asymmetry": 0.083,
+      "aristotelian_completeness": {
+        "completeness": 0.75,
+        "by_cause": {
+          "material": 2,
+          "formal": 0,
+          "efficient": 1,
+          "final": 1
+        },
+        "missing_causes": [
+          "formal"
+        ]
+      },
+      "slots": {
+        "1_successor": [],
+        "2_predecessor": [],
+        "3_substrate": [
+          "e11"
+        ],
+        "4_container": [
+          "e17"
+        ],
+        "5_peer_coherent": [
+          "e25"
+        ],
+        "6_peer_contradictory": [],
+        "7_code": [],
+        "8_thermo": [
+          "e33"
+        ],
+        "9_cause": [
+          "e3"
+        ],
+        "10_effect": [],
+        "11_specification": [],
+        "12_instantiation": []
+      },
+      "slot_classical_names": {
+        "3_substrate": "Material cause / Constituent",
+        "4_container": "Genus (Porphyry's Isagoge)",
+        "5_peer_coherent": "From similars (a similibus)",
+        "8_thermo": "Accident (Porphyry, contingent attribute)",
+        "9_cause": "Efficient cause (causa efficiens)"
+      },
+      "active_since": "2025-11-01T00:00:00",
+      "deprecated_since": null,
+      "metadata": {
+        "node_type": "experiment",
+        "domain": "biomedical",
+        "gene_target": "HK2",
+        "cell_line": "CL-HeLa",
+        "phenotype": "glycolytic_flux_reduction",
+        "state": "OK",
+        "prestress_local": 0
+      },
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "BIO-EXP-005",
+      "label": "siSDHB in HEK293 → succinate accumulation + pseudohypoxia",
+      "scale": 1,
+      "layer": "structural",
+      "structural_ref": null,
+      "harmonic_ceiling": 6,
+      "ve_score": 0.333,
+      "ve_score_harmonic": 0.667,
+      "saturation": 0.333,
+      "prestress_local": 0,
+      "asymmetry": 0.0,
+      "aristotelian_completeness": {
+        "completeness": 0.75,
+        "by_cause": {
+          "material": 2,
+          "formal": 0,
+          "efficient": 1,
+          "final": 1
+        },
+        "missing_causes": [
+          "formal"
+        ]
+      },
+      "slots": {
+        "1_successor": [],
+        "2_predecessor": [],
+        "3_substrate": [
+          "e12"
+        ],
+        "4_container": [
+          "e19"
+        ],
+        "5_peer_coherent": [],
+        "6_peer_contradictory": [],
+        "7_code": [],
+        "8_thermo": [
+          "e34"
+        ],
+        "9_cause": [
+          "e4"
+        ],
+        "10_effect": [],
+        "11_specification": [],
+        "12_instantiation": []
+      },
+      "slot_classical_names": {
+        "3_substrate": "Material cause / Constituent",
+        "4_container": "Genus (Porphyry's Isagoge)",
+        "8_thermo": "Accident (Porphyry, contingent attribute)",
+        "9_cause": "Efficient cause (causa efficiens)"
+      },
+      "active_since": "2025-11-01T00:00:00",
+      "deprecated_since": null,
+      "metadata": {
+        "node_type": "experiment",
+        "domain": "biomedical",
+        "gene_target": "SDHB",
+        "cell_line": "CL-HEK293",
+        "phenotype": "succinate_accumulation_HIF1a_stabilisation",
+        "state": "OK",
+        "prestress_local": 0
+      },
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "BIO-EXP-006",
+      "label": "siMYC in A549 → glycolytic + glutaminolytic flux drop",
+      "scale": 1,
+      "layer": "structural",
+      "structural_ref": null,
+      "harmonic_ceiling": 6,
+      "ve_score": 0.417,
+      "ve_score_harmonic": 0.833,
+      "saturation": 0.417,
+      "prestress_local": 0,
+      "asymmetry": 0.083,
+      "aristotelian_completeness": {
+        "completeness": 0.75,
+        "by_cause": {
+          "material": 2,
+          "formal": 0,
+          "efficient": 1,
+          "final": 1
+        },
+        "missing_causes": [
+          "formal"
+        ]
+      },
+      "slots": {
+        "1_successor": [],
+        "2_predecessor": [],
+        "3_substrate": [
+          "e13"
+        ],
+        "4_container": [
+          "e18"
+        ],
+        "5_peer_coherent": [
+          "e25"
+        ],
+        "6_peer_contradictory": [],
+        "7_code": [],
+        "8_thermo": [
+          "e35"
+        ],
+        "9_cause": [
+          "e5"
+        ],
+        "10_effect": [],
+        "11_specification": [],
+        "12_instantiation": []
+      },
+      "slot_classical_names": {
+        "3_substrate": "Material cause / Constituent",
+        "4_container": "Genus (Porphyry's Isagoge)",
+        "5_peer_coherent": "From similars (a similibus)",
+        "8_thermo": "Accident (Porphyry, contingent attribute)",
+        "9_cause": "Efficient cause (causa efficiens)"
+      },
+      "active_since": "2025-11-01T00:00:00",
+      "deprecated_since": null,
+      "metadata": {
+        "node_type": "experiment",
+        "domain": "biomedical",
+        "gene_target": "MYC",
+        "cell_line": "CL-A549",
+        "phenotype": "dual_metabolic_flux_drop",
+        "state": "OK",
+        "prestress_local": 0
+      },
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "BIO-EXP-007",
+      "label": "siPIK3CA in HeLa → AKT phospho-S473 collapse (>80%)",
+      "scale": 1,
+      "layer": "structural",
+      "structural_ref": null,
+      "harmonic_ceiling": 6,
+      "ve_score": 0.417,
+      "ve_score_harmonic": 0.833,
+      "saturation": 0.417,
+      "prestress_local": 0,
+      "asymmetry": 0.25,
+      "aristotelian_completeness": {
+        "completeness": 0.5,
+        "by_cause": {
+          "material": 3,
+          "formal": 0,
+          "efficient": 0,
+          "final": 2
+        },
+        "missing_causes": [
+          "formal",
+          "efficient"
+        ]
+      },
+      "slots": {
+        "1_successor": [],
+        "2_predecessor": [],
+        "3_substrate": [
+          "e14"
+        ],
+        "4_container": [
+          "e20"
+        ],
+        "5_peer_coherent": [],
+        "6_peer_contradictory": [],
+        "7_code": [],
+        "8_thermo": [
+          "e36"
+        ],
+        "9_cause": [],
+        "10_effect": [
+          "e2"
+        ],
+        "11_specification": [],
+        "12_instantiation": [
+          "e7"
+        ]
+      },
+      "slot_classical_names": {
+        "3_substrate": "Material cause / Constituent",
+        "4_container": "Genus (Porphyry's Isagoge)",
+        "8_thermo": "Accident (Porphyry, contingent attribute)",
+        "10_effect": "From effect (ab effectu)",
+        "12_instantiation": "Individual / Hypostasis (this-something)"
+      },
+      "active_since": "2025-11-01T00:00:00",
+      "deprecated_since": null,
+      "metadata": {
+        "node_type": "experiment",
+        "domain": "biomedical",
+        "gene_target": "PIK3CA",
+        "cell_line": "CL-HeLa",
+        "phenotype": "AKT_dephosphorylation",
+        "state": "OK",
+        "prestress_local": 0
+      },
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "BIO-EXP-008",
+      "label": "TP53-/- knockout in HEK293 (planned 2026Q3 follow-up)",
+      "scale": 1,
+      "layer": "structural",
+      "structural_ref": null,
+      "harmonic_ceiling": 6,
+      "ve_score": 0.25,
+      "ve_score_harmonic": 0.5,
+      "saturation": 0.25,
+      "prestress_local": 1,
+      "asymmetry": 0.25,
+      "aristotelian_completeness": {
+        "completeness": 0.5,
+        "by_cause": {
+          "material": 1,
+          "formal": 0,
+          "efficient": 1,
+          "final": 0
+        },
+        "missing_causes": [
+          "formal",
+          "final"
+        ]
+      },
+      "slots": {
+        "1_successor": [
+          "e29"
+        ],
+        "2_predecessor": [],
+        "3_substrate": [
+          "e15"
+        ],
+        "4_container": [],
+        "5_peer_coherent": [],
+        "6_peer_contradictory": [
+          "e26"
+        ],
+        "7_code": [],
+        "8_thermo": [],
+        "9_cause": [],
+        "10_effect": [],
+        "11_specification": [],
+        "12_instantiation": []
+      },
+      "slot_classical_names": {
+        "1_successor": "A posteriori (from time, posterior)",
+        "3_substrate": "Material cause / Constituent",
+        "6_peer_contradictory": "From contraries (a contrariis)"
+      },
+      "active_since": "2025-11-01T00:00:00",
+      "deprecated_since": null,
+      "metadata": {
+        "node_type": "experiment",
+        "domain": "biomedical",
+        "gene_target": "TP53",
+        "cell_line": "CL-HEK293",
+        "phenotype": "planned_apoptosis_followup",
+        "state": "QUEUED",
+        "prestress_local": 1
+      },
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "PAPER-WARBURG-2009",
+      "label": "Vander Heiden et al. (2009) — Warburg revisited",
+      "scale": 2,
+      "layer": "structural",
+      "structural_ref": null,
+      "harmonic_ceiling": 12,
+      "ve_score": 0.083,
+      "ve_score_harmonic": 0.083,
+      "saturation": 0.167,
+      "prestress_local": 0,
+      "asymmetry": 0.083,
+      "aristotelian_completeness": {
+        "completeness": 0.25,
+        "by_cause": {
+          "material": 1,
+          "formal": 0,
+          "efficient": 0,
+          "final": 0
+        },
+        "missing_causes": [
+          "formal",
+          "efficient",
+          "final"
+        ]
+      },
+      "slots": {
+        "1_successor": [],
+        "2_predecessor": [],
+        "3_substrate": [
+          "e21",
+          "e22"
+        ],
+        "4_container": [],
+        "5_peer_coherent": [],
+        "6_peer_contradictory": [],
+        "7_code": [],
+        "8_thermo": [],
+        "9_cause": [],
+        "10_effect": [],
+        "11_specification": [],
+        "12_instantiation": []
+      },
+      "slot_classical_names": {
+        "3_substrate": "Material cause / Constituent"
+      },
+      "active_since": "2026-05-02T00:00:00",
+      "deprecated_since": null,
+      "metadata": {
+        "node_type": "paper",
+        "domain": "biomedical",
+        "doi": "10.1126/science.1160809",
+        "prestress_local": 0
+      },
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "PAPER-KRAS-G12D",
+      "label": "Hingorani et al. (2003) — KRAS-G12D pancreatic model",
+      "scale": 2,
+      "layer": "structural",
+      "structural_ref": null,
+      "harmonic_ceiling": 12,
+      "ve_score": 0.083,
+      "ve_score_harmonic": 0.083,
+      "saturation": 0.083,
+      "prestress_local": 0,
+      "asymmetry": 0.083,
+      "aristotelian_completeness": {
+        "completeness": 0.25,
+        "by_cause": {
+          "material": 1,
+          "formal": 0,
+          "efficient": 0,
+          "final": 0
+        },
+        "missing_causes": [
+          "formal",
+          "efficient",
+          "final"
+        ]
+      },
+      "slots": {
+        "1_successor": [],
+        "2_predecessor": [],
+        "3_substrate": [
+          "e23"
+        ],
+        "4_container": [],
+        "5_peer_coherent": [],
+        "6_peer_contradictory": [],
+        "7_code": [],
+        "8_thermo": [],
+        "9_cause": [],
+        "10_effect": [],
+        "11_specification": [],
+        "12_instantiation": []
+      },
+      "slot_classical_names": {
+        "3_substrate": "Material cause / Constituent"
+      },
+      "active_since": "2026-05-02T00:00:00",
+      "deprecated_since": null,
+      "metadata": {
+        "node_type": "paper",
+        "domain": "biomedical",
+        "doi": "10.1016/S1535-6108(03)00309-X",
+        "prestress_local": 0
+      },
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "PAPER-WARBURG-2009_section_introduction",
+      "label": "Introduction",
+      "scale": 1,
+      "layer": "structural",
+      "structural_ref": null,
+      "harmonic_ceiling": 6,
+      "ve_score": 0.083,
+      "ve_score_harmonic": 0.167,
+      "saturation": 0.083,
+      "prestress_local": 0,
+      "asymmetry": 0.083,
+      "aristotelian_completeness": {
+        "completeness": 0.25,
+        "by_cause": {
+          "material": 0,
+          "formal": 0,
+          "efficient": 0,
+          "final": 1
+        },
+        "missing_causes": [
+          "material",
+          "formal",
+          "efficient"
+        ]
+      },
+      "slots": {
+        "1_successor": [],
+        "2_predecessor": [],
+        "3_substrate": [],
+        "4_container": [
+          "e21"
+        ],
+        "5_peer_coherent": [],
+        "6_peer_contradictory": [],
+        "7_code": [],
+        "8_thermo": [],
+        "9_cause": [],
+        "10_effect": [],
+        "11_specification": [],
+        "12_instantiation": []
+      },
+      "slot_classical_names": {
+        "4_container": "Genus (Porphyry's Isagoge)"
+      },
+      "active_since": "2026-05-02T00:00:00",
+      "deprecated_since": null,
+      "metadata": {
+        "node_type": "paper_section",
+        "domain": "biomedical",
+        "paper_id": "PAPER-WARBURG-2009",
+        "section": "Introduction",
+        "prestress_local": 0
+      },
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "PAPER-WARBURG-2009_section_HK2_dependency",
+      "label": "HK2 dependency in tumour cells",
+      "scale": 1,
+      "layer": "structural",
+      "structural_ref": null,
+      "harmonic_ceiling": 6,
+      "ve_score": 0.083,
+      "ve_score_harmonic": 0.167,
+      "saturation": 0.083,
+      "prestress_local": 0,
+      "asymmetry": 0.083,
+      "aristotelian_completeness": {
+        "completeness": 0.25,
+        "by_cause": {
+          "material": 0,
+          "formal": 0,
+          "efficient": 0,
+          "final": 1
+        },
+        "missing_causes": [
+          "material",
+          "formal",
+          "efficient"
+        ]
+      },
+      "slots": {
+        "1_successor": [],
+        "2_predecessor": [],
+        "3_substrate": [],
+        "4_container": [
+          "e22"
+        ],
+        "5_peer_coherent": [],
+        "6_peer_contradictory": [],
+        "7_code": [],
+        "8_thermo": [],
+        "9_cause": [],
+        "10_effect": [],
+        "11_specification": [],
+        "12_instantiation": []
+      },
+      "slot_classical_names": {
+        "4_container": "Genus (Porphyry's Isagoge)"
+      },
+      "active_since": "2026-05-02T00:00:00",
+      "deprecated_since": null,
+      "metadata": {
+        "node_type": "paper_section",
+        "domain": "biomedical",
+        "paper_id": "PAPER-WARBURG-2009",
+        "section": "HK2 dependency in tumour cells",
+        "prestress_local": 0
+      },
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "PAPER-KRAS-G12D_section_pancreatic_initiation",
+      "label": "Pancreatic initiation by KRAS-G12D",
+      "scale": 1,
+      "layer": "structural",
+      "structural_ref": null,
+      "harmonic_ceiling": 6,
+      "ve_score": 0.083,
+      "ve_score_harmonic": 0.167,
+      "saturation": 0.083,
+      "prestress_local": 0,
+      "asymmetry": 0.083,
+      "aristotelian_completeness": {
+        "completeness": 0.25,
+        "by_cause": {
+          "material": 0,
+          "formal": 0,
+          "efficient": 0,
+          "final": 1
+        },
+        "missing_causes": [
+          "material",
+          "formal",
+          "efficient"
+        ]
+      },
+      "slots": {
+        "1_successor": [],
+        "2_predecessor": [],
+        "3_substrate": [],
+        "4_container": [
+          "e23"
+        ],
+        "5_peer_coherent": [],
+        "6_peer_contradictory": [],
+        "7_code": [],
+        "8_thermo": [],
+        "9_cause": [],
+        "10_effect": [],
+        "11_specification": [],
+        "12_instantiation": []
+      },
+      "slot_classical_names": {
+        "4_container": "Genus (Porphyry's Isagoge)"
+      },
+      "active_since": "2026-05-02T00:00:00",
+      "deprecated_since": null,
+      "metadata": {
+        "node_type": "paper_section",
+        "domain": "biomedical",
+        "paper_id": "PAPER-KRAS-G12D",
+        "section": "Pancreatic initiation by KRAS-G12D",
+        "prestress_local": 0
+      },
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "PREREG-NCT04185883",
+      "label": "Phase II trial of adagrasib (MRTX849, KRAS-G12C inhibitor) in NSCLC",
+      "scale": 2,
+      "layer": "structural",
+      "structural_ref": null,
+      "harmonic_ceiling": 12,
+      "ve_score": 0.083,
+      "ve_score_harmonic": 0.083,
+      "saturation": 0.083,
+      "prestress_local": 0,
+      "asymmetry": 0.083,
+      "aristotelian_completeness": {
+        "completeness": 0.25,
+        "by_cause": {
+          "material": 0,
+          "formal": 1,
+          "efficient": 0,
+          "final": 0
+        },
+        "missing_causes": [
+          "material",
+          "efficient",
+          "final"
+        ]
+      },
+      "slots": {
+        "1_successor": [],
+        "2_predecessor": [],
+        "3_substrate": [],
+        "4_container": [],
+        "5_peer_coherent": [],
+        "6_peer_contradictory": [],
+        "7_code": [],
+        "8_thermo": [],
+        "9_cause": [],
+        "10_effect": [],
+        "11_specification": [
+          "e6"
+        ],
+        "12_instantiation": []
+      },
+      "slot_classical_names": {
+        "11_specification": "Formal cause / Eidos (Aristotle)"
+      },
+      "active_since": "2026-05-02T00:00:00",
+      "deprecated_since": null,
+      "metadata": {
+        "node_type": "prereg_prediction_referenced",
+        "domain": "biomedical",
+        "registry": "ClinicalTrials.gov",
+        "nct_id": "NCT04185883",
+        "prestress_local": 0
+      },
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "PREREG-NCT03634332",
+      "label": "Phase I/II trial of alpelisib (PIK3CA inhibitor) in HR+ breast cancer",
+      "scale": 2,
+      "layer": "structural",
+      "structural_ref": null,
+      "harmonic_ceiling": 12,
+      "ve_score": 0.083,
+      "ve_score_harmonic": 0.083,
+      "saturation": 0.083,
+      "prestress_local": 0,
+      "asymmetry": 0.083,
+      "aristotelian_completeness": {
+        "completeness": 0.25,
+        "by_cause": {
+          "material": 0,
+          "formal": 1,
+          "efficient": 0,
+          "final": 0
+        },
+        "missing_causes": [
+          "material",
+          "efficient",
+          "final"
+        ]
+      },
+      "slots": {
+        "1_successor": [],
+        "2_predecessor": [],
+        "3_substrate": [],
+        "4_container": [],
+        "5_peer_coherent": [],
+        "6_peer_contradictory": [],
+        "7_code": [],
+        "8_thermo": [],
+        "9_cause": [],
+        "10_effect": [],
+        "11_specification": [
+          "e7"
+        ],
+        "12_instantiation": []
+      },
+      "slot_classical_names": {
+        "11_specification": "Formal cause / Eidos (Aristotle)"
+      },
+      "active_since": "2026-05-02T00:00:00",
+      "deprecated_since": null,
+      "metadata": {
+        "node_type": "prereg_prediction_referenced",
+        "domain": "biomedical",
+        "registry": "ClinicalTrials.gov",
+        "nct_id": "NCT03634332",
+        "prestress_local": 0
+      },
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "FREE-ENERGY-glycolysis-net",
+      "label": "Net ΔG glycolysis ≈ -85 kJ/mol (standard physiological)",
+      "scale": 0,
+      "layer": "thermodynamic",
+      "structural_ref": "PATHWAY-glycolysis",
+      "harmonic_ceiling": 4,
+      "ve_score": 0.083,
+      "ve_score_harmonic": 0.25,
+      "saturation": 0.083,
+      "prestress_local": 0,
+      "asymmetry": 0.083,
+      "aristotelian_completeness": {
+        "completeness": 0.25,
+        "by_cause": {
+          "material": 0,
+          "formal": 1,
+          "efficient": 0,
+          "final": 0
+        },
+        "missing_causes": [
+          "material",
+          "efficient",
+          "final"
+        ]
+      },
+      "slots": {
+        "1_successor": [],
+        "2_predecessor": [],
+        "3_substrate": [],
+        "4_container": [],
+        "5_peer_coherent": [],
+        "6_peer_contradictory": [],
+        "7_code": [
+          "e37"
+        ],
+        "8_thermo": [],
+        "9_cause": [],
+        "10_effect": [],
+        "11_specification": [],
+        "12_instantiation": []
+      },
+      "slot_classical_names": {
+        "7_code": "Differentia + Definition (essential form)"
+      },
+      "active_since": "2026-05-02T00:00:00",
+      "deprecated_since": null,
+      "metadata": {
+        "node_type": "measurement",
+        "domain": "biomedical",
+        "quantity": "ΔG_net_kJ_per_mol",
+        "value": "-85",
+        "prestress_local": 0
+      },
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "CODE-deseq2-pipeline",
+      "label": "DESeq2 differential expression pipeline (R)",
+      "scale": 0,
+      "layer": "structural",
+      "structural_ref": null,
+      "harmonic_ceiling": 4,
+      "ve_score": 0.083,
+      "ve_score_harmonic": 0.25,
+      "saturation": 0.583,
+      "prestress_local": 0,
+      "asymmetry": 0.083,
+      "aristotelian_completeness": {
+        "completeness": 0.25,
+        "by_cause": {
+          "material": 0,
+          "formal": 1,
+          "efficient": 0,
+          "final": 0
+        },
+        "missing_causes": [
+          "material",
+          "efficient",
+          "final"
+        ]
+      },
+      "slots": {
+        "1_successor": [],
+        "2_predecessor": [],
+        "3_substrate": [],
+        "4_container": [],
+        "5_peer_coherent": [],
+        "6_peer_contradictory": [],
+        "7_code": [
+          "e30",
+          "e31",
+          "e32",
+          "e33",
+          "e34",
+          "e35",
+          "e36"
+        ],
+        "8_thermo": [],
+        "9_cause": [],
+        "10_effect": [],
+        "11_specification": [],
+        "12_instantiation": []
+      },
+      "slot_classical_names": {
+        "7_code": "Differentia + Definition (essential form)"
+      },
+      "active_since": "2026-05-02T00:00:00",
+      "deprecated_since": null,
+      "metadata": {
+        "node_type": "code_holon",
+        "domain": "biomedical",
+        "language": "R",
+        "prestress_local": 0
+      },
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "source": "BIO-EXP-001",
+      "target": "DISEASE-apoptosis-evasion",
+      "slot": "CAUSE",
+      "slot_number": 9,
+      "mechanical_type": "strut",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 1,
+      "scale_to": 2,
+      "evidence": "siTP53 efficiently causes apoptosis evasion under genotoxic stress (Vogelstein 2000)",
+      "signal_type": "matter_energy",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e1",
+      "source": "BIO-EXP-003",
+      "target": "DISEASE-pancreatic-ca",
+      "slot": "CAUSE",
+      "slot_number": 9,
+      "mechanical_type": "strut",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 1,
+      "scale_to": 2,
+      "evidence": "KRAS knockdown reverses pancreatic-ca tumourigenicity (Singh et al. 2009)",
+      "signal_type": "matter_energy",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e2",
+      "source": "BIO-EXP-007",
+      "target": "PATHWAY-pi3k-akt",
+      "slot": "CAUSE",
+      "slot_number": 9,
+      "mechanical_type": "strut",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 1,
+      "scale_to": 2,
+      "evidence": "PIK3CA knockdown causally collapses PI3K-AKT-mTOR axis activity",
+      "signal_type": "matter_energy",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e3",
+      "source": "BIO-EXP-004",
+      "target": "PATHWAY-glycolysis",
+      "slot": "EFFECT",
+      "slot_number": 10,
+      "mechanical_type": "cable",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 1,
+      "scale_to": 2,
+      "evidence": "HK2 knockdown drops glycolytic flux ≈60% — direct metabolic effect",
+      "signal_type": "matter_energy",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e4",
+      "source": "BIO-EXP-005",
+      "target": "PATHWAY-tca",
+      "slot": "EFFECT",
+      "slot_number": 10,
+      "mechanical_type": "cable",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 1,
+      "scale_to": 2,
+      "evidence": "SDHB knockdown accumulates succinate — TCA-cycle blockade (Selak et al. 2005)",
+      "signal_type": "matter_energy",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e5",
+      "source": "BIO-EXP-006",
+      "target": "PATHWAY-glycolysis",
+      "slot": "EFFECT",
+      "slot_number": 10,
+      "mechanical_type": "cable",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 1,
+      "scale_to": 2,
+      "evidence": "MYC knockdown drops glycolytic flux (and glutaminolysis); dual metabolic effect",
+      "signal_type": "matter_energy",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e6",
+      "source": "BIO-EXP-003",
+      "target": "PREREG-NCT04185883",
+      "slot": "SPECIFICATION",
+      "slot_number": 11,
+      "mechanical_type": "strut",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 1,
+      "scale_to": 2,
+      "evidence": "BIO-EXP-003 (KRAS knockdown phenotype) is the preclinical SPECIFICATION for adagrasib trial NCT04185883",
+      "signal_type": "information",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e7",
+      "source": "BIO-EXP-007",
+      "target": "PREREG-NCT03634332",
+      "slot": "SPECIFICATION",
+      "slot_number": 11,
+      "mechanical_type": "strut",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 1,
+      "scale_to": 2,
+      "evidence": "BIO-EXP-007 (PIK3CA dependency) is the preclinical SPECIFICATION for alpelisib trial NCT03634332",
+      "signal_type": "information",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e8",
+      "source": "CL-HEK293",
+      "target": "BIO-EXP-001",
+      "slot": "SUBSTRATE",
+      "slot_number": 3,
+      "mechanical_type": "cable",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 0,
+      "scale_to": 1,
+      "evidence": "CL-HEK293 is the material substrate of BIO-EXP-001",
+      "signal_type": "matter_energy",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e9",
+      "source": "CL-HeLa",
+      "target": "BIO-EXP-002",
+      "slot": "SUBSTRATE",
+      "slot_number": 3,
+      "mechanical_type": "cable",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 0,
+      "scale_to": 1,
+      "evidence": "CL-HeLa is the material substrate of BIO-EXP-002",
+      "signal_type": "matter_energy",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e10",
+      "source": "CL-A549",
+      "target": "BIO-EXP-003",
+      "slot": "SUBSTRATE",
+      "slot_number": 3,
+      "mechanical_type": "cable",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 0,
+      "scale_to": 1,
+      "evidence": "CL-A549 is the material substrate of BIO-EXP-003",
+      "signal_type": "matter_energy",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e11",
+      "source": "CL-HeLa",
+      "target": "BIO-EXP-004",
+      "slot": "SUBSTRATE",
+      "slot_number": 3,
+      "mechanical_type": "cable",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 0,
+      "scale_to": 1,
+      "evidence": "CL-HeLa is the material substrate of BIO-EXP-004",
+      "signal_type": "matter_energy",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e12",
+      "source": "CL-HEK293",
+      "target": "BIO-EXP-005",
+      "slot": "SUBSTRATE",
+      "slot_number": 3,
+      "mechanical_type": "cable",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 0,
+      "scale_to": 1,
+      "evidence": "CL-HEK293 is the material substrate of BIO-EXP-005",
+      "signal_type": "matter_energy",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e13",
+      "source": "CL-A549",
+      "target": "BIO-EXP-006",
+      "slot": "SUBSTRATE",
+      "slot_number": 3,
+      "mechanical_type": "cable",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 0,
+      "scale_to": 1,
+      "evidence": "CL-A549 is the material substrate of BIO-EXP-006",
+      "signal_type": "matter_energy",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e14",
+      "source": "CL-HeLa",
+      "target": "BIO-EXP-007",
+      "slot": "SUBSTRATE",
+      "slot_number": 3,
+      "mechanical_type": "cable",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 0,
+      "scale_to": 1,
+      "evidence": "CL-HeLa is the material substrate of BIO-EXP-007",
+      "signal_type": "matter_energy",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e15",
+      "source": "CL-HEK293",
+      "target": "BIO-EXP-008",
+      "slot": "SUBSTRATE",
+      "slot_number": 3,
+      "mechanical_type": "cable",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 0,
+      "scale_to": 1,
+      "evidence": "CL-HEK293 is the material substrate of BIO-EXP-008",
+      "signal_type": "matter_energy",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e16",
+      "source": "BIO-EXP-001",
+      "target": "BIO-EXP-002",
+      "slot": "PREDECESSOR",
+      "slot_number": 2,
+      "mechanical_type": "strut",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 1,
+      "scale_to": 1,
+      "evidence": "BIO-EXP-002 is a HeLa replication of the HEK293 result in BIO-EXP-001",
+      "signal_type": "matter_energy",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e17",
+      "source": "PATHWAY-glycolysis",
+      "target": "BIO-EXP-004",
+      "slot": "CONTAINER",
+      "slot_number": 4,
+      "mechanical_type": "strut",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 2,
+      "scale_to": 1,
+      "evidence": "Glycolysis pathway contains the HK2 knockdown experiment that probes it",
+      "signal_type": "auto",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e18",
+      "source": "PATHWAY-glycolysis",
+      "target": "BIO-EXP-006",
+      "slot": "CONTAINER",
+      "slot_number": 4,
+      "mechanical_type": "strut",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 2,
+      "scale_to": 1,
+      "evidence": "Glycolysis pathway contains the MYC knockdown experiment (MYC drives glycolytic flux)",
+      "signal_type": "auto",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e19",
+      "source": "PATHWAY-tca",
+      "target": "BIO-EXP-005",
+      "slot": "CONTAINER",
+      "slot_number": 4,
+      "mechanical_type": "strut",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 2,
+      "scale_to": 1,
+      "evidence": "TCA cycle contains the SDHB knockdown experiment (SDHB IS Complex II of TCA/ETC)",
+      "signal_type": "auto",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e20",
+      "source": "PATHWAY-pi3k-akt",
+      "target": "BIO-EXP-007",
+      "slot": "CONTAINER",
+      "slot_number": 4,
+      "mechanical_type": "strut",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 2,
+      "scale_to": 1,
+      "evidence": "PI3K-AKT-mTOR pathway contains the PIK3CA knockdown experiment",
+      "signal_type": "auto",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e21",
+      "source": "PAPER-WARBURG-2009",
+      "target": "PAPER-WARBURG-2009_section_introduction",
+      "slot": "CONTAINER",
+      "slot_number": 4,
+      "mechanical_type": "strut",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 2,
+      "scale_to": 1,
+      "evidence": "paper contains section",
+      "signal_type": "auto",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e22",
+      "source": "PAPER-WARBURG-2009",
+      "target": "PAPER-WARBURG-2009_section_HK2_dependency",
+      "slot": "CONTAINER",
+      "slot_number": 4,
+      "mechanical_type": "strut",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 2,
+      "scale_to": 1,
+      "evidence": "paper contains section",
+      "signal_type": "auto",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e23",
+      "source": "PAPER-KRAS-G12D",
+      "target": "PAPER-KRAS-G12D_section_pancreatic_initiation",
+      "slot": "CONTAINER",
+      "slot_number": 4,
+      "mechanical_type": "strut",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 2,
+      "scale_to": 1,
+      "evidence": "paper contains section",
+      "signal_type": "auto",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e24",
+      "source": "BIO-EXP-001",
+      "target": "BIO-EXP-002",
+      "slot": "PEER_COHERENT",
+      "slot_number": 5,
+      "mechanical_type": "strut",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 1,
+      "scale_to": 1,
+      "evidence": "Both confirm TP53-loss attenuates etoposide-induced apoptosis (cross-line replication)",
+      "signal_type": "auto",
+      "essence": "TP53 loss blocks DNA-damage apoptosis",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e25",
+      "source": "BIO-EXP-004",
+      "target": "BIO-EXP-006",
+      "slot": "PEER_COHERENT",
+      "slot_number": 5,
+      "mechanical_type": "strut",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 1,
+      "scale_to": 1,
+      "evidence": "Both confirm tumour glycolytic flux is suppressible by single-gene knockdown",
+      "signal_type": "auto",
+      "essence": "glycolytic flux is single-gene-knockdown-suppressible in tumour cells",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e26",
+      "source": "BIO-EXP-001",
+      "target": "BIO-EXP-008",
+      "slot": "PEER_CONTRADICTORY",
+      "slot_number": 6,
+      "mechanical_type": "cable",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "AMBIGUOUS",
+      "scale_from": 1,
+      "scale_to": 1,
+      "evidence": "Anticipated contradiction: siRNA partial knockdown vs CRISPR full KO often diverge on TP53 phenotype (Stojic et al. 2018 Nature Communications; documented 'knockdown vs knockout' discrepancy)",
+      "signal_type": "auto",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e27",
+      "source": "DISEASE-apoptosis-evasion",
+      "target": "BIO-EXP-001",
+      "slot": "INSTANTIATION",
+      "slot_number": 12,
+      "mechanical_type": "cable",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 2,
+      "scale_to": 1,
+      "evidence": "BIO-EXP-001 phenotype is an instance of the apoptosis-evasion cancer hallmark category",
+      "signal_type": "information",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e28",
+      "source": "DISEASE-pancreatic-ca",
+      "target": "BIO-EXP-003",
+      "slot": "INSTANTIATION",
+      "slot_number": 12,
+      "mechanical_type": "cable",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 2,
+      "scale_to": 1,
+      "evidence": "BIO-EXP-003 KRAS-A549 phenotype is an instance of the KRAS-driven adenocarcinoma category",
+      "signal_type": "information",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e29",
+      "source": "BIO-EXP-001",
+      "target": "BIO-EXP-008",
+      "slot": "SUCCESSOR",
+      "slot_number": 1,
+      "mechanical_type": "cable",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 1,
+      "scale_to": 1,
+      "evidence": "BIO-EXP-008 is the planned CRISPR-KO follow-up to siRNA result BIO-EXP-001",
+      "signal_type": "matter_energy",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e30",
+      "source": "BIO-EXP-001",
+      "target": "CODE-deseq2-pipeline",
+      "slot": "CODE",
+      "slot_number": 7,
+      "mechanical_type": "strut",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 1,
+      "scale_to": 0,
+      "evidence": "BIO-EXP-001 differential-expression analysis ran via DESeq2 pipeline",
+      "signal_type": "information",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e31",
+      "source": "BIO-EXP-002",
+      "target": "CODE-deseq2-pipeline",
+      "slot": "CODE",
+      "slot_number": 7,
+      "mechanical_type": "strut",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 1,
+      "scale_to": 0,
+      "evidence": "BIO-EXP-002 differential-expression analysis ran via DESeq2 pipeline",
+      "signal_type": "information",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e32",
+      "source": "BIO-EXP-003",
+      "target": "CODE-deseq2-pipeline",
+      "slot": "CODE",
+      "slot_number": 7,
+      "mechanical_type": "strut",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 1,
+      "scale_to": 0,
+      "evidence": "BIO-EXP-003 differential-expression analysis ran via DESeq2 pipeline",
+      "signal_type": "information",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e33",
+      "source": "BIO-EXP-004",
+      "target": "CODE-deseq2-pipeline",
+      "slot": "CODE",
+      "slot_number": 7,
+      "mechanical_type": "strut",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 1,
+      "scale_to": 0,
+      "evidence": "BIO-EXP-004 differential-expression analysis ran via DESeq2 pipeline",
+      "signal_type": "information",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e34",
+      "source": "BIO-EXP-005",
+      "target": "CODE-deseq2-pipeline",
+      "slot": "CODE",
+      "slot_number": 7,
+      "mechanical_type": "strut",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 1,
+      "scale_to": 0,
+      "evidence": "BIO-EXP-005 differential-expression analysis ran via DESeq2 pipeline",
+      "signal_type": "information",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e35",
+      "source": "BIO-EXP-006",
+      "target": "CODE-deseq2-pipeline",
+      "slot": "CODE",
+      "slot_number": 7,
+      "mechanical_type": "strut",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 1,
+      "scale_to": 0,
+      "evidence": "BIO-EXP-006 differential-expression analysis ran via DESeq2 pipeline",
+      "signal_type": "information",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e36",
+      "source": "BIO-EXP-007",
+      "target": "CODE-deseq2-pipeline",
+      "slot": "CODE",
+      "slot_number": 7,
+      "mechanical_type": "strut",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "EXTRACTED",
+      "scale_from": 1,
+      "scale_to": 0,
+      "evidence": "BIO-EXP-007 differential-expression analysis ran via DESeq2 pipeline",
+      "signal_type": "information",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    },
+    {
+      "id": "e37",
+      "source": "FREE-ENERGY-glycolysis-net",
+      "target": "PATHWAY-glycolysis",
+      "slot": "THERMO",
+      "slot_number": 8,
+      "mechanical_type": "cable",
+      "prehension_type": "positive",
+      "negative_prehension": false,
+      "confidence": "INFERRED",
+      "scale_from": 0,
+      "scale_to": 2,
+      "evidence": "Standard physiological ΔG_net of glycolysis ≈ -85 kJ/mol (thermodynamic accident of the substrate)",
+      "signal_type": "matter_energy",
+      "essence": "",
+      "created_at": "2026-05-02T00:00:00",
+      "history": [],
+      "provenance": {
+        "extractor": "unknown",
+        "build_id": "20260502T000000"
+      }
+    }
+  ],
+  "maxims_violations": [],
+  "maxims_proposals": [
+    {
+      "from_edge_id": "e17",
+      "from_slot": "CONTAINER",
+      "maxim": "Genus (Porphyry's Isagoge)",
+      "type": "missing_specification",
+      "rationale": "BIO-EXP-004 has CONTAINER (PATHWAY-glycolysis) but no SPECIFICATION — Porphyry: every species under a genus has a differentia/form",
+      "focus_node": "BIO-EXP-004"
+    },
+    {
+      "from_edge_id": "e18",
+      "from_slot": "CONTAINER",
+      "maxim": "Genus (Porphyry's Isagoge)",
+      "type": "missing_specification",
+      "rationale": "BIO-EXP-006 has CONTAINER (PATHWAY-glycolysis) but no SPECIFICATION — Porphyry: every species under a genus has a differentia/form",
+      "focus_node": "BIO-EXP-006"
+    },
+    {
+      "from_edge_id": "e19",
+      "from_slot": "CONTAINER",
+      "maxim": "Genus (Porphyry's Isagoge)",
+      "type": "missing_specification",
+      "rationale": "BIO-EXP-005 has CONTAINER (PATHWAY-tca) but no SPECIFICATION — Porphyry: every species under a genus has a differentia/form",
+      "focus_node": "BIO-EXP-005"
+    },
+    {
+      "from_edge_id": "e20",
+      "from_slot": "CONTAINER",
+      "maxim": "Genus (Porphyry's Isagoge)",
+      "type": "missing_specification",
+      "rationale": "BIO-EXP-007 has CONTAINER (PATHWAY-pi3k-akt) but no SPECIFICATION — Porphyry: every species under a genus has a differentia/form",
+      "focus_node": "BIO-EXP-007"
+    },
+    {
+      "from_edge_id": "e21",
+      "from_slot": "CONTAINER",
+      "maxim": "Genus (Porphyry's Isagoge)",
+      "type": "missing_specification",
+      "rationale": "PAPER-WARBURG-2009_section_introduction has CONTAINER (PAPER-WARBURG-2009) but no SPECIFICATION — Porphyry: every species under a genus has a differentia/form",
+      "focus_node": "PAPER-WARBURG-2009_section_introduction"
+    },
+    {
+      "from_edge_id": "e22",
+      "from_slot": "CONTAINER",
+      "maxim": "Genus (Porphyry's Isagoge)",
+      "type": "missing_specification",
+      "rationale": "PAPER-WARBURG-2009_section_HK2_dependency has CONTAINER (PAPER-WARBURG-2009) but no SPECIFICATION — Porphyry: every species under a genus has a differentia/form",
+      "focus_node": "PAPER-WARBURG-2009_section_HK2_dependency"
+    },
+    {
+      "from_edge_id": "e23",
+      "from_slot": "CONTAINER",
+      "maxim": "Genus (Porphyry's Isagoge)",
+      "type": "missing_specification",
+      "rationale": "PAPER-KRAS-G12D_section_pancreatic_initiation has CONTAINER (PAPER-KRAS-G12D) but no SPECIFICATION — Porphyry: every species under a genus has a differentia/form",
+      "focus_node": "PAPER-KRAS-G12D_section_pancreatic_initiation"
+    }
+  ],
+  "maxims_summary": {
+    "n_violations": 0,
+    "n_proposals": 7,
+    "by_slot": {},
+    "by_severity": {},
+    "by_proposal_type": {
+      "missing_specification": 7
+    },
+    "n_nodes_with_findings": 7,
+    "coverage": {
+      "n_checked": 35,
+      "n_unable_to_validate": 0,
+      "n_no_rule_for_slot": 3
+    }
+  },
+  "maxims_by_node": {
+    "BIO-EXP-004": {
+      "violations": 0,
+      "proposals": 1,
+      "strict": 0,
+      "warn": 0
+    },
+    "BIO-EXP-006": {
+      "violations": 0,
+      "proposals": 1,
+      "strict": 0,
+      "warn": 0
+    },
+    "BIO-EXP-005": {
+      "violations": 0,
+      "proposals": 1,
+      "strict": 0,
+      "warn": 0
+    },
+    "BIO-EXP-007": {
+      "violations": 0,
+      "proposals": 1,
+      "strict": 0,
+      "warn": 0
+    },
+    "PAPER-WARBURG-2009_section_introduction": {
+      "violations": 0,
+      "proposals": 1,
+      "strict": 0,
+      "warn": 0
+    },
+    "PAPER-WARBURG-2009_section_HK2_dependency": {
+      "violations": 0,
+      "proposals": 1,
+      "strict": 0,
+      "warn": 0
+    },
+    "PAPER-KRAS-G12D_section_pancreatic_initiation": {
+      "violations": 0,
+      "proposals": 1,
+      "strict": 0,
+      "warn": 0
+    }
+  },
+  "viz_components": [
+    {
+      "root": "CODE-deseq2-pipeline",
+      "nodes": [
+        "CL-HEK293",
+        "CL-HeLa",
+        "CL-A549",
+        "PATHWAY-glycolysis",
+        "PATHWAY-tca",
+        "PATHWAY-pi3k-akt",
+        "DISEASE-pancreatic-ca",
+        "DISEASE-apoptosis-evasion",
+        "BIO-EXP-001",
+        "BIO-EXP-002",
+        "BIO-EXP-003",
+        "BIO-EXP-004",
+        "BIO-EXP-005",
+        "BIO-EXP-006",
+        "BIO-EXP-007",
+        "BIO-EXP-008",
+        "PREREG-NCT04185883",
+        "PREREG-NCT03634332",
+        "FREE-ENERGY-glycolysis-net",
+        "CODE-deseq2-pipeline"
+      ],
+      "size": 20,
+      "sample_label": "HEK293 (human embryonic kidney)"
+    },
+    {
+      "root": "PAPER-WARBURG-2009_section_HK2_dependency",
+      "nodes": [
+        "PAPER-WARBURG-2009",
+        "PAPER-WARBURG-2009_section_introduction",
+        "PAPER-WARBURG-2009_section_HK2_dependency"
+      ],
+      "size": 3,
+      "sample_label": "Vander Heiden et al. (2009) — Warburg re"
+    },
+    {
+      "root": "PAPER-KRAS-G12D_section_pancreatic_initiation",
+      "nodes": [
+        "PAPER-KRAS-G12D",
+        "PAPER-KRAS-G12D_section_pancreatic_initiation"
+      ],
+      "size": 2,
+      "sample_label": "Hingorani et al. (2003) — KRAS-G12D panc"
+    }
+  ],
+  "viz_citation_edges": [],
+  "viz_dominant_polyhedron": {
+    "name": "jitterbug:0.5",
+    "count": 16,
+    "share": 0.375,
+    "transitional": true,
+    "primary": "cube",
+    "secondary": "cuboctahedron",
+    "all_counts": {
+      "tetrahedron": 4,
+      "cube": 9,
+      "cuboctahedron": 7,
+      "octahedron": 4
+    }
+  },
+  "viz_polyhedron_rules": [
+    {
+      "name": "hot_frontier_strong",
+      "when": {
+        "prestress_min": 3,
+        "ve_min": 0.4
+      },
+      "pick": "jitterbug_50",
+      "rationale": "high prestress + high VE = research tension hotspot; render as transitional jitterbug"
+    },
+    {
+      "name": "hot_frontier_weak",
+      "when": {
+        "prestress_min": 2,
+        "ve_min": 0.3
+      },
+      "pick": "jitterbug_25",
+      "rationale": "moderate prestress + moderate VE = early-stage tension"
+    },
+    {
+      "name": "atomic_scale",
+      "when": {
+        "scale_eq": 0
+      },
+      "pick": "tetrahedron",
+      "rationale": "s0 atomic claims always render as the analysis-pole tetrahedron"
+    },
+    {
+      "name": "section_godnode",
+      "when": {
+        "scale_eq": 1,
+        "ve_min": 0.6
+      },
+      "pick": "cuboctahedron",
+      "rationale": "high-VE section holon = vector equilibrium"
+    },
+    {
+      "name": "section_mid",
+      "when": {
+        "scale_eq": 1,
+        "ve_min": 0.3
+      },
+      "pick": "octahedron",
+      "rationale": "mid-VE section = methodological"
+    },
+    {
+      "name": "section_saturated",
+      "when": {
+        "scale_eq": 1,
+        "saturation_min": 0.5
+      },
+      "pick": "truncated_octahedron",
+      "rationale": "saturated section = space-filling synthesis"
+    },
+    {
+      "name": "section_default",
+      "when": {
+        "scale_eq": 1
+      },
+      "pick": "octahedron",
+      "rationale": "fallback for s1 — methodological"
+    },
+    {
+      "name": "paper_godnode",
+      "when": {
+        "scale_eq": 2,
+        "ve_min": 0.5
+      },
+      "pick": "cuboctahedron",
+      "rationale": "paper at vector equilibrium"
+    },
+    {
+      "name": "paper_symmetric",
+      "when": {
+        "scale_eq": 2,
+        "ve_min": 0.3
+      },
+      "pick": "icosahedron",
+      "rationale": "paper with high symmetric structure"
+    },
+    {
+      "name": "paper_saturated",
+      "when": {
+        "scale_eq": 2,
+        "saturation_min": 1.0
+      },
+      "pick": "truncated_octahedron",
+      "rationale": "saturated paper"
+    },
+    {
+      "name": "paper_default",
+      "when": {
+        "scale_eq": 2
+      },
+      "pick": "cube",
+      "rationale": "fallback for s2 — pragmatic"
+    },
+    {
+      "name": "cluster_active",
+      "when": {
+        "scale_eq": 3,
+        "ve_min": 0.2
+      },
+      "pick": "dodecahedron",
+      "rationale": "cluster with non-trivial activity"
+    },
+    {
+      "name": "cluster_default",
+      "when": {
+        "scale_eq": 3
+      },
+      "pick": "icosahedron",
+      "rationale": "fallback for s3 — symmetric synthesis"
+    },
+    {
+      "name": "project_root",
+      "when": {
+        "scale_eq": 4
+      },
+      "pick": "icosidodecahedron",
+      "rationale": "s4 project-as-whole"
+    },
+    {
+      "name": "ultimate_fallback",
+      "when": {},
+      "pick": "octahedron",
+      "rationale": "no rule matched — default to methodological"
+    }
+  ],
+  "viz_porphyrian_relations": {
+    "PATHWAY-glycolysis": {
+      "genera": [],
+      "species": [
+        "BIO-EXP-004",
+        "BIO-EXP-006"
+      ]
+    },
+    "PATHWAY-tca": {
+      "genera": [],
+      "species": [
+        "BIO-EXP-005"
+      ]
+    },
+    "PATHWAY-pi3k-akt": {
+      "genera": [],
+      "species": [
+        "BIO-EXP-007"
+      ]
+    },
+    "BIO-EXP-004": {
+      "genera": [
+        "PATHWAY-glycolysis"
+      ],
+      "species": []
+    },
+    "BIO-EXP-005": {
+      "genera": [
+        "PATHWAY-tca"
+      ],
+      "species": []
+    },
+    "BIO-EXP-006": {
+      "genera": [
+        "PATHWAY-glycolysis"
+      ],
+      "species": []
+    },
+    "BIO-EXP-007": {
+      "genera": [
+        "PATHWAY-pi3k-akt"
+      ],
+      "species": []
+    },
+    "PAPER-WARBURG-2009": {
+      "genera": [],
+      "species": [
+        "PAPER-WARBURG-2009_section_introduction",
+        "PAPER-WARBURG-2009_section_HK2_dependency"
+      ]
+    },
+    "PAPER-KRAS-G12D": {
+      "genera": [],
+      "species": [
+        "PAPER-KRAS-G12D_section_pancreatic_initiation"
+      ]
+    },
+    "PAPER-WARBURG-2009_section_introduction": {
+      "genera": [
+        "PAPER-WARBURG-2009"
+      ],
+      "species": []
+    },
+    "PAPER-WARBURG-2009_section_HK2_dependency": {
+      "genera": [
+        "PAPER-WARBURG-2009"
+      ],
+      "species": []
+    },
+    "PAPER-KRAS-G12D_section_pancreatic_initiation": {
+      "genera": [
+        "PAPER-KRAS-G12D"
+      ],
+      "species": []
+    }
+  },
+  "viz_wittgenstein_neighbors": {
+    "BIO-EXP-001": [
+      {
+        "id": "BIO-EXP-005",
+        "score": 0.3333
+      },
+      {
+        "id": "BIO-EXP-008",
+        "score": 0.1667
+      }
+    ],
+    "BIO-EXP-002": [
+      {
+        "id": "BIO-EXP-004",
+        "score": 0.4
+      },
+      {
+        "id": "BIO-EXP-007",
+        "score": 0.4
+      },
+      {
+        "id": "BIO-EXP-008",
+        "score": 0.25
+      },
+      {
+        "id": "BIO-EXP-005",
+        "score": 0.2
+      },
+      {
+        "id": "BIO-EXP-003",
+        "score": 0.1667
+      }
+    ],
+    "BIO-EXP-003": [
+      {
+        "id": "BIO-EXP-006",
+        "score": 0.3333
+      },
+      {
+        "id": "BIO-EXP-002",
+        "score": 0.1667
+      },
+      {
+        "id": "BIO-EXP-005",
+        "score": 0.1667
+      }
+    ],
+    "BIO-EXP-004": [
+      {
+        "id": "BIO-EXP-002",
+        "score": 0.4
+      },
+      {
+        "id": "BIO-EXP-006",
+        "score": 0.3333
+      },
+      {
+        "id": "BIO-EXP-007",
+        "score": 0.3333
+      },
+      {
+        "id": "BIO-EXP-005",
+        "score": 0.1667
+      }
+    ],
+    "BIO-EXP-005": [
+      {
+        "id": "BIO-EXP-001",
+        "score": 0.3333
+      },
+      {
+        "id": "BIO-EXP-008",
+        "score": 0.25
+      },
+      {
+        "id": "BIO-EXP-002",
+        "score": 0.2
+      },
+      {
+        "id": "BIO-EXP-003",
+        "score": 0.1667
+      },
+      {
+        "id": "BIO-EXP-004",
+        "score": 0.1667
+      }
+    ],
+    "BIO-EXP-006": [
+      {
+        "id": "BIO-EXP-003",
+        "score": 0.3333
+      },
+      {
+        "id": "BIO-EXP-004",
+        "score": 0.3333
+      },
+      {
+        "id": "BIO-EXP-002",
+        "score": 0.1667
+      },
+      {
+        "id": "BIO-EXP-005",
+        "score": 0.1667
+      }
+    ],
+    "BIO-EXP-007": [
+      {
+        "id": "BIO-EXP-002",
+        "score": 0.4
+      },
+      {
+        "id": "BIO-EXP-004",
+        "score": 0.3333
+      },
+      {
+        "id": "BIO-EXP-005",
+        "score": 0.1667
+      }
+    ],
+    "BIO-EXP-008": [
+      {
+        "id": "BIO-EXP-002",
+        "score": 0.25
+      },
+      {
+        "id": "BIO-EXP-005",
+        "score": 0.25
+      },
+      {
+        "id": "BIO-EXP-001",
+        "score": 0.1667
+      }
+    ]
+  },
+  "viz_inherited_grounding": {},
+  "viz_temporal_decay": {}
+}

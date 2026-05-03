@@ -1,0 +1,66 @@
+cff-version: 1.2.0
+title: >-
+  The Tensegrity Knowledge Graph: A Holonic Architecture for
+  Scientific Knowledge Representation
+message: >-
+  If you use this software or the corpus snapshots in your research,
+  please cite the paper and this software repository.
+type: software
+authors:
+  - given-names: Juan David
+    family-names: Zuluaga-Monroy
+    email: expelius@gmail.com
+    affiliation: Independent Research Group, Colombia
+  - given-names: Diego Fernando
+    family-names: Zuluaga-Monroy
+    email: diferzu@gmail.com
+    affiliation: Independent Research Group, Colombia
+abstract: >-
+  The Tensegrity Knowledge Graph (GCT) is a formally grounded,
+  domain-agnostic architecture for representing scientific research
+  knowledge. It synthesizes seven classical philosophical traditions —
+  Fuller's IVM cuboctahedron geometry (12-slot semantic schema),
+  Koestler's holonic architecture (5 epistemological scales),
+  Aristotle's four causes (edge typing), Whitehead's process philosophy
+  (temporal epistemic decay), Wittgenstein's family resemblance
+  (similarity metric), Porphyry's tree (taxonomic inference), and
+  Boethius's logical maxims (dual validation–inference engine) —
+  into a unified framework. The repository ships three reproducible
+  snapshots, a synthetic-injection ablation harness, an OWL
+  serialisation aligned with BFO 2.0, and a single-script
+  reproducibility harness covering every numerical claim in the
+  associated paper.
+keywords:
+  - knowledge representation
+  - formal ontology
+  - holonic architecture
+  - Aristotelian causation
+  - Wittgenstein family resemblance
+  - temporal knowledge graphs
+  - Boethian maxims
+  - research knowledge management
+license: MIT
+license-url: https://opensource.org/licenses/MIT
+repository-code: 'https://github.com/expelius/gct-paper-fois2026'
+url: 'https://github.com/expelius/gct-paper-fois2026'
+version: gct-paper-v1
+date-released: '2026-05-03'
+preferred-citation:
+  type: conference-paper
+  title: >-
+    The Tensegrity Knowledge Graph: A Holonic Architecture for
+    Scientific Knowledge Representation
+  authors:
+    - given-names: Juan David
+      family-names: Zuluaga-Monroy
+      email: expelius@gmail.com
+    - given-names: Diego Fernando
+      family-names: Zuluaga-Monroy
+      email: diferzu@gmail.com
+  year: 2026
+  collection-title: 'Proceedings of FOIS 2026 / Applied Ontology'
+  publisher:
+    name: IOS Press
+  notes: >-
+    Reproducibility package, including frozen snapshot SHAs and OWL
+    serialisation, ships alongside the manuscript at the repository URL.
